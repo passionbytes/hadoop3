@@ -27,7 +27,7 @@ RUN \
     if [ ! -e /usr/bin/python ]; then ln -s /usr/bin/python2.7 /usr/bin/python; fi
 
 # If you have already downloaded the tgz, add this line OR comment it AND ...
-#ADD hadoop-3.1.0.tar.gz /
+#ADD hadoop-3.1.x.tar.gz /
 
 # ... uncomment the 2 first lines
 RUN \
