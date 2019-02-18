@@ -57,5 +57,30 @@ sudo docker rm hadoop3
 | Spark | Latest | O |
 
 
+## Miscellaneous commands
+
+docker build -t hadoop3 .
+
+docker run --hostname=hadoop3 -p 8088:8088 -p 9870:9870 -p 9864:9864 -p 19888:19888   -p 8042:8042 -p 8888:8888 --name hadoop3 -d hadoop3
+
+docker exec -it hadoop3 bash
+
+
+yarn jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.1.1.jar pi 10 100
+
+To remove: docker rm --force hadoop3
+
+To stop:  docker stop <containerid>
+  
+To copy files from local(Mac)  to docker:
+
+scp mycode.tar ravishankarnair@host.docker.internal:/Users/ravishankarnair/Downloads
+
+TO copy files from docker to local(Mac)
+
+scp ravishankarnair@host.docker.internal:/Users/ravishankarnair/Downloads/mycode.zip .
+
+
+
 
 
